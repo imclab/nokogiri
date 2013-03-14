@@ -1356,6 +1356,7 @@ static VALUE in_context(VALUE self, VALUE _str, VALUE _options)
 
     while (list) {
       xmlXPathNodeSetAddUnique(set, list);
+      nokogiri_root_node(list);
       list = list->next;
     }
 

@@ -11,6 +11,7 @@ static int dealloc_node_i(xmlNodePtr key, xmlNodePtr node, xmlDocPtr doc)
     break;
   default:
     if(node->parent == NULL) {
+      node->next = NULL;
       xmlAddChild((xmlNodePtr)doc, node);
     }
   }
